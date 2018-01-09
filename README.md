@@ -1,6 +1,6 @@
 ## Daijoubu
 
-DDLC Mod A WIP DDLC mod, created by Starcoo, nosferatuss and kirby7. Currently in early stages of development.
+A WIP DDLC mod, created by Starcoo, nosferatuss and kirby7. Currently in early stages of development.
 
 Proposed Ideas:
 
