@@ -1,9 +1,13 @@
-## Advanced scripts
+## Daijoubu
 
-These `.rpy` files are copies of the story script files found in DDLC's `script.rpa` archive.
+DDLC Mod A WIP DDLC mod, created by Starcoo, nosferatuss and kirby7. Currently in early stages of development.
 
-These are offered as a reference, and if you don't include them in the `game/` folder for your mod, then the original version will be automatically loaded from DDLC's archives on startup. If you do create a `.rpy` file of the same name in your `game/` folder, then your version will be loaded instead.
+Proposed Ideas:
 
-This can be very useful if you wanted to mimic DDLC's storyline up to some point, then diverge. For example, if you wanted to follow the story up until Sayori's suicide, but then diverge into a what-if scenario where Sayori doesn't die, then you could add `script-ch5.rpy` to your game and edit it as needed.
+Changes to the routes in the game.
+An additional Monika route.
+More choices.
+Additional special endings.
+(Note: The portrayal of the characters in the mod are our own. Please play the original game before trying any mods.)
 
-**If you are not making changes to these files, please do not include them in the distribution for your mod.**
+All DDLC related content, including characters, logos, artwork, music, and the rights to such content, belong to Team Salvato. This mod is fan work and we are in no way affiliated with Team Salvato.
