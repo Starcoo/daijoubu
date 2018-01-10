@@ -1,6 +1,6 @@
 # Monika's Words
 ## Word ideas to put into the poem game for Monika.  
-File format: word,mPoint,sPoint,nPoint,yPoint  
+File format: word,sPoint,nPoint,yPoint,mPoint 
   
 Monika's Winning Words  
 thot  
