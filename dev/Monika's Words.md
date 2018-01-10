@@ -21,3 +21,4 @@ sound
 nature  
 color (s)  
 cacophany  
+thoughtful  
