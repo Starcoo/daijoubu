@@ -21,7 +21,10 @@ init python:
     # Static variables for characters' poem appeal: Disklike, Neutral, Like
     POEM_DISLIKE_THRESHOLD = 29
     POEM_LIKE_THRESHOLD = 45
-
+    
+    # Variable to check if Monika has won the game or not.
+    ISMONIKAWINNER = 0
+    
     # Building the word list
     full_wordlist = []
     with renpy.file('poemwords.txt') as wordfile:
@@ -235,10 +238,10 @@ label poem(transition=True):
         natsukiOffset = 0
         yuriOffset = 0
         monikaOffset = 0
-        sayoriZoom = 0.7
-        natsukiZoom = 0.7
-        yuriZoom = 0.7
-        monikaZoom = 0.7
+        sayoriZoom = 1
+        natsukiZoom = 1
+        yuriZoom = 1
+        monikaZoom = 1
 
 
 
@@ -329,11 +332,19 @@ label poem(transition=True):
             pointlist = sorted(unsorted_pointlist, key=unsorted_pointlist.get)
 
             # Set poemwinner to the highest scorer
-            poemwinner[chapter] = pointlist[2]
+            poemwinner[chapter] = pointlist[3]
+            if poemwinner[chapter] == "monika":
+                ISMONIKAWINNER = 1
         else:
-            if nPointTotal > yPointTotal: poemwinner[chapter] = "natsuki"
-            else: poemwinner[chapter] = "yuri"
-
+            if nPointTotal > yPointTotal and nPointTotal > mPointTotal: 
+                poemwinner[chapter] = "natsuki"            
+            if yPointTotal > nPointTotal and yPointTotal > mPointTotal: 
+               poemwinner[chapter] = "yuri"
+            if mPointTotal > nPointTotal and mPointTotal > yPointTotal: 
+                poemwinner[chapter] = "monika"
+                ISMONIKAWINNER = 1
+                
+            
         # Add appeal point based on poem winner
         exec(poemwinner[chapter][0] + "_appeal += 1")
 
@@ -344,9 +355,14 @@ label poem(transition=True):
         elif nPointTotal > POEM_LIKE_THRESHOLD: n_poemappeal[chapter] = 1
         if yPointTotal < POEM_DISLIKE_THRESHOLD: y_poemappeal[chapter] = -1
         elif yPointTotal > POEM_LIKE_THRESHOLD: y_poemappeal[chapter] = 1
-
+        if mPointTotal < POEM_DISLIKE_THRESHOLD: m_poemappeal[chapter] = -1
+        elif mPointTotal < POEM_DISLIKE_THRESHOLD: m_poemappeal[chapter] = 1 
+        
         # Poem winner always has appeal 1 (loves poem)
         exec(poemwinner[chapter][0] + "_poemappeal[chapter] = 1")
+    
+    if ISMONIKAWINNER == 1:
+        call monikaWin
 
     #1/6 chance that we'll see creepy Happy Thoughts pic after the game in Act 2
     if persistent.playthrough == 2 and persistent.seen_eyes == None and renpy.random.randint(0,5) == 0:
@@ -375,9 +391,8 @@ label poem(transition=True):
         alpha 0
         linear 1.0 alpha 1.0
     pause 1.0
-    return
-
-
+    return ISMONIKAWINNER
+    
 #Creepy picture Happy Thoughts that scrolls up the screen infinitely
 image bg eyes_move:
     "images/bg/eyes.png"
