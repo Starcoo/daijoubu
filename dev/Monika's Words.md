@@ -33,7 +33,7 @@ purple
 black  
 white  
 grey  
-pink  
+magenta  
 challenge  
 sky  
 mountains  
@@ -43,3 +43,9 @@ stars
 virtuality  
 literature  
 debate  
+dark  
+ocean  
+uncontrollable  
+sunny
+raincloud
+sunset
