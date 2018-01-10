@@ -5,3 +5,4 @@ victory
 cryptic  
 reality  
 leadership  
+tenacious
