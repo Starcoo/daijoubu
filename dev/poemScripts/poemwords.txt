@@ -1,4 +1,4 @@
-#File format: word,sPoint,nPoint,yPoint
+#File format: word,sPoint,nPoint,yPoint,mPoint
 
 #Sayori's winning words
 happiness,3,2,1,0
