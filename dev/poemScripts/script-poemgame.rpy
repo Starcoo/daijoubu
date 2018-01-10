@@ -188,16 +188,16 @@ label poem(transition=True):
     if persistent.playthrough == 3:
         show m_sticker at sticker_bLeft #Act 3, Just Monika
     else:
+        show n_sticker at sticker_uLeft
         if persistent.playthrough == 0: #Show Sayori in Act 1
             show s_sticker at sticker_bLeft
-        show n_sticker at sticker_uLeft
-        show m_sticker at sticker_bRight
         if persistent.playthrough == 2 and chapter == 2:
             show y_sticker_cut at sticker_uRight
         else:
             show y_sticker at sticker_uRight
         if persistent.playthrough == 2 and chapter == 2:
             show m_sticker at sticker_m_glitch
+        show m_sticker at sticker_bRight
     if transition:
         with dissolve_scene_full
     #Play music
@@ -507,16 +507,16 @@ image y_sticker glitch:
 
 #These transforms determine the placement of the stickers
 transform sticker_bLeft:
-    xcenter 120 yalign 0.9 subpixel True
+    xcenter 120 yalign 0.85 subpixel True
     
 transform sticker_bRight:
-    xcenter 240 yalign 0.9 subpixel True
+    xcenter 280 yalign 0.65 subpixel True
     
 transform sticker_uLeft:
-    xcenter 120 yalign 0.6 subpixel True
+    xcenter 120 yalign 0.45 subpixel True
     
 transform sticker_uRight:
-    xcenter 240 yalign 0.6 subpixel True
+    xcenter 280 yalign 0.25 subpixel True
 
 transform sticker_glitch:
     xcenter 50 yalign 1.8 subpixel True
