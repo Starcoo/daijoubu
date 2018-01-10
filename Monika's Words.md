@@ -5,4 +5,8 @@ victory
 cryptic  
 reality  
 leadership  
-
+tenacious  
+infatuation  
+freedom  
+simulation  
+manipulation  
