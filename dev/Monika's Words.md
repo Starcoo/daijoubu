@@ -23,4 +23,13 @@ color (s)
 cacophany  
 thoughtful  
 time (y)  
-
+green  
+brown  
+blue  
+red  
+yellow  
+orange  
+purple  
+black  
+white  
+grey  
