@@ -3,7 +3,6 @@
 File format: word,sPoint,nPoint,yPoint,mPoint 
   
 Monika's Winning Words  
-thot  
 victory  
 cryptic  
 reality  
