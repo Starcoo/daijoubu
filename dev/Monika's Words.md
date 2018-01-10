@@ -48,3 +48,11 @@ uncontrollable
 sunny  
 raincloud  
 sunset  
+flower  
+feather  
+wind  
+dawn  
+twilight  
+forever  
+eternity  
+universe  
