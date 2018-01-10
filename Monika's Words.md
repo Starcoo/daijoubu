@@ -9,4 +9,7 @@ tenacious
 infatuation  
 freedom  
 simulation  
-manipulation  
+manipulation  
+deleted  
+music (s)  
+infinite (y)  
