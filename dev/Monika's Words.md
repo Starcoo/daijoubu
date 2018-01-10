@@ -40,4 +40,6 @@ mountains
 trees  
 planets  
 stars  
-virtuality
+virtuality  
+literature  
+debate  
