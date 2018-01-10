@@ -13,15 +13,15 @@ freedom
 simulation  
 manipulation  
 deleted  
-music (s)  
-infinite (y)   
+music  
+infinite  
 piano  
 sound  
 nature  
-color (s)  
+color  
 cacophany  
 thoughtful  
-time (y)  
+time 
 green  
 brown  
 blue  
