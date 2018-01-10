@@ -33,3 +33,4 @@ purple
 black  
 white  
 grey  
+pink  
