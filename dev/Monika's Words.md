@@ -35,3 +35,8 @@ white
 grey  
 pink  
 challenge  
+sky  
+mountains  
+trees  
+planets  
+stars  
