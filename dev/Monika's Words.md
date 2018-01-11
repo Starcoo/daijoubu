@@ -58,3 +58,6 @@ eternity
 universe  
 purpose  
 noise  
+commitment  
+vow  
+intense  
