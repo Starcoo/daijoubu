@@ -253,7 +253,7 @@ magenta,1,2,1,3
 challenge,2,1,2,3  
 sky,2,2,1,3  
 mountains,2,1,1,3  
-trees2,1,1,3  
+trees,2,1,1,3  
 planets,1,1,2,3  
 stars,1,2,1,3  
 virtuality,1,1,2,3  
@@ -265,8 +265,8 @@ uncontrollable,1,1,2,3
 sunny,2,1,1,3  
 raincloud,2,1,1,3  
 sunset,2,1,1,3  
-flower2,1,1,3  
-feather2,1,1,3  
+flower,2,1,1,3  
+feather,2,1,1,3  
 wind,2,1,1,3  
 dawn,2,1,1,3  
 twilight,2,1,1,3  
