@@ -1,1 +1,0 @@
-python "C:\Program Files (x86)\rpatool-master\rpatool.py" -o "C:\Users\Arthur Lu\Desktop" -x "C:\Program Files (x86)\Steam\steamapps\common\Doki Doki Literature Club\game\scripts.rpa"
