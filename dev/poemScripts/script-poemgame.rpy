@@ -15,12 +15,14 @@ init python:
             self.sPoint = sPoint
             self.nPoint = nPoint
             self.yPoint = yPoint
+            # Monika's Points
             self.mPoint = mPoint
             self.glitch = glitch
 
     # Static variables for characters' poem appeal: Disklike, Neutral, Like
-    POEM_DISLIKE_THRESHOLD = 29
-    POEM_LIKE_THRESHOLD = 45
+    # Edited due to the existance of 4 girls. 
+    POEM_DISLIKE_THRESHOLD = 24
+    POEM_LIKE_THRESHOLD = 40
     
     # Building the word list
     full_wordlist = []
@@ -33,8 +35,10 @@ init python:
 
             # File format: word,sPoint,nPoint,yPoint,mPoint
             x = line.split(',')
+            # float(x[4]) added so that Monika's point per word can be read in.
             full_wordlist.append(PoemWord(x[0], float(x[1]), float(x[2]), float(x[3]), float(x[4])))
 
+    # All "Monika" variables here were added.
     seen_eyes_this_chapter = False
     sayoriTime = renpy.random.random() * 4 + 4
     natsukiTime = renpy.random.random() * 4 + 4
@@ -184,20 +188,11 @@ label poem(transition=True):
     else:
         scene bg notebook #Normal
     show screen quick_menu
-    #Create the character stickers
-    if persistent.playthrough == 3:
-        show m_sticker at sticker_bLeft #Act 3, Just Monika
-    else:
-        show n_sticker at sticker_uLeft
-        if persistent.playthrough == 0: #Show Sayori in Act 1
-            show s_sticker at sticker_bLeft
-        if persistent.playthrough == 2 and chapter == 2:
-            show y_sticker_cut at sticker_uRight
-        else:
-            show y_sticker at sticker_uRight
-        if persistent.playthrough == 2 and chapter == 2:
-            show m_sticker at sticker_m_glitch
-        show m_sticker at sticker_bRight
+    #Create the character stickers (removed any selection statements due to only using act 1 in the mod)
+    show n_sticker at sticker_uLeft
+    show s_sticker at sticker_bLeft
+    show y_sticker at sticker_uRight
+    show m_sticker at sticker_bRight
     if transition:
         with dissolve_scene_full
     #Play music
@@ -294,6 +289,7 @@ label poem(transition=True):
                             renpy.show("n_sticker hop")
                         if t.yPoint >= 3:
                             renpy.show("y_sticker hop")
+                            # Adding Monika's Sticker Hop
                         if t.mPoint >= 3:
                             renpy.show("m_sticker hop")
                     else:
@@ -340,6 +336,7 @@ label poem(transition=True):
         elif nPointTotal > POEM_LIKE_THRESHOLD: n_poemappeal[chapter] = 1
         if yPointTotal < POEM_DISLIKE_THRESHOLD: y_poemappeal[chapter] = -1
         elif yPointTotal > POEM_LIKE_THRESHOLD: y_poemappeal[chapter] = 1
+        # Monika's Poem Appeal
         if mPointTotal < POEM_DISLIKE_THRESHOLD: m_poemappeal[chapter] = -1
         elif mPointTotal < POEM_DISLIKE_THRESHOLD: m_poemappeal[chapter] = 1 
         
@@ -506,6 +503,7 @@ image y_sticker glitch:
         repeat
 
 #These transforms determine the placement of the stickers
+# Edited to match mod positions, and renamed accordingly.
 transform sticker_bLeft:
     xcenter 120 yalign 0.85 subpixel True
     
