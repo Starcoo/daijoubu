@@ -1,6 +1,3 @@
-#This is a copy of definitions.rpy from DDLC.
-#Use this as a starting point if you would like to override with your own.
-
 #Explanation for Definitions
 #This section defines stuff for the game: sprite poses for the girls, music, and backgrounds
 #If you plan on adding new content, pop them over down there and mimic the appropriate lines!
