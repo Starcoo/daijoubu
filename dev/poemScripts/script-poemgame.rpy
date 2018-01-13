@@ -20,7 +20,6 @@ init python:
     # Edited due to the existance of 4 girls. 
     POEM_DISLIKE_THRESHOLD = 24
     POEM_LIKE_THRESHOLD = 40
-    
     # Building the word list
     full_wordlist = []
     with renpy.file('poemwords.txt') as wordfile:
@@ -326,16 +325,35 @@ label poem(transition=True):
         # Add appeal point based on poem winner
         exec(poemwinner[chapter][0] + "_appeal += 1")
 
-        # Set poemappeal
-        if sPointTotal < POEM_DISLIKE_THRESHOLD: s_poemappeal[chapter] = -1
-        elif sPointTotal > POEM_LIKE_THRESHOLD: s_poemappeal[chapter] = 1
-        if nPointTotal < POEM_DISLIKE_THRESHOLD: n_poemappeal[chapter] = -1
-        elif nPointTotal > POEM_LIKE_THRESHOLD: n_poemappeal[chapter] = 1
-        if yPointTotal < POEM_DISLIKE_THRESHOLD: y_poemappeal[chapter] = -1
-        elif yPointTotal > POEM_LIKE_THRESHOLD: y_poemappeal[chapter] = 1
+        ## Set poem appeal
+        # Sayori's Poem Appeal
+        if sPointTotal < POEM_DISLIKE_THRESHOLD:
+              s_poemappeal[chapter] = -1
+              sTotal = sTotal - 1
+        elif sPointTotal > POEM_LIKE_THRESHOLD: 
+              s_poemappeal[chapter] = 1
+              sTotal = sTotal + 1
+        #Natsuki's Poem Appeal	
+        if nPointTotal < POEM_DISLIKE_THRESHOLD:
+              n_poemappeal[chapter] = -1
+              nTotal = nTotal - 1
+        elif nPointTotal > POEM_LIKE_THRESHOLD:
+              n_poemappeal[chapter] = 1
+              nTotal = nTotal + 1
+        # Yuri's Poem Appeal	
+        if yPointTotal < POEM_DISLIKE_THRESHOLD:
+              y_poemappeal[chapter] = -1
+              yTotal = yTotal - 1
+        elif yPointTotal > POEM_LIKE_THRESHOLD: 
+              y_poemappeal[chapter] = 1
+              yTOtal = yTotal + 1
         # Monika's Poem Appeal
-        if mPointTotal < POEM_DISLIKE_THRESHOLD: m_poemappeal[chapter] = -1
-        elif mPointTotal < POEM_DISLIKE_THRESHOLD: m_poemappeal[chapter] = 1 
+        if mPointTotal < POEM_DISLIKE_THRESHOLD:
+              m_poemappeal[chapter] = -1
+              mTotal = mTotal - 1
+        elif mPointTotal > POEM_LIKE_THRESHOLD:
+              m_poemappeal[chapter] = 1 
+              mTotal = mTotal + 1
         
         # Poem winner always has appeal 1 (loves poem)
         exec(poemwinner[chapter][0] + "_poemappeal[chapter] = 1")
