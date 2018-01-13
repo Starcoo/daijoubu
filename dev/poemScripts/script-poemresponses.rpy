@@ -114,6 +114,7 @@ label poemresponse_monika:
     scene bg club_day
     show monika 1a at t11 zorder 2
     with wipeleft_scene
+    $ poemopinion = "med"
     if m_poemappeal[chapter - 1] < 0:
         $ poemopinion = "bad"
     elif m_poemappeal[chapter - 1] > 0:
@@ -2414,6 +2415,13 @@ label ch3_m_start:
     mc "Alright..."
     return
 
+label ch1_m_bad:
+    jump ch1_m_med
+
+label ch1_m_med:
+    $ nextscene = "m_" + poemwinner[0] + "_" + str(eval(poemwinner[0][0] + "_appeal"))
+    jump expression nextscene
+
 label ch1_m_good:
     m 2h "..."
     m 1k "This is great, [player]!"
@@ -2504,6 +2512,45 @@ label m_yuri_1:
     m "Just keep exploring, and learn by trying new things!"
     return
 
+label ch2_m_bad:
+    #Didn't like last poem or this one
+    if m_poemappeal[0]<0:
+        m "your poetry sucks"
+        return
+    #Liked the last poem but not this one
+    else:
+        m "last one was better, this sucks"
+        return
+
+label ch2_m_med:
+    #Likes this one better than the last one
+    if m_poemappeal[0] < 0:
+        m "You've definitely improved, [player]!"
+        mc "You really think so?"
+        label ch2_m_med_shared:
+            $ nextscene = "m_" + poemwinner[1] + "_" + str(eval(poemwinner[1][0] + "_appeal"))
+            jump expression nextscene
+    #Likes this one the same amount
+    elif m_poemappeal[0] == 0:
+        jump ch2_m_med_shared
+    #Likes the last one better
+    else:
+        m 1m "I'm not sure how I feel about this one..."
+        mc "Oh... is it really that bad?"
+        m 5a "No, not at all!"
+        jump ch2_m_med_shared
+
+label ch2_m_good:
+    #Likes this poem better than the last one
+    if m_poemappeal[0]!=1:
+        #text
+        m "this is better than before"
+        return
+    #Likes both poems a lot
+    else:
+        m "i love your poetry"
+        return
+
 label m_natsuki_2:
     m 1j "It's pretty good~"
     m 1a "You've been spending some time with Natsuki, haven't you?"
@@ -2584,6 +2631,52 @@ label m_yuri_2:
     m 1n "Oh, well I know...!"
     m "I was just saying~"
     return
+
+label ch3_m_bad:
+    #Didn't like any of your poems
+    if m_poemappeal[0] < 0 and m_poemappeal[1] < 0:
+        return
+    #Didn't like one of your previous poems
+    elif m_poemappeal[1] < 0 or m_poemappeal[0] < 0:
+        return
+    #This is the first poem they disliked
+    else:
+        return
+
+label ch3_m_med:
+    #Disliked both previous poems
+    if m_poemappeal[0] < 0 and m_poemappeal[1] < 0:
+            "Hm... it's a bit better than before."
+            label ch3_m_med_shared:
+                $ nextscene = "m_" + poemwinner[2] + "_" + str(eval(poemwinner[2][0] + "_appeal"))
+                jump expression nextscene
+    #Didn't love one of the previous poems
+    elif m_poemappeal[0] < 1 or m_poemappeal[1] < 1:
+        jump ch3_m_med_shared
+    #Liked both previous poems
+    else:
+        m "This one is good."
+        jump ch3_m_med_shared
+
+label ch3_m_good:
+    #Didn't like the last two poems
+    if m_poemappeal[0] < 0 and m_poemappeal[1] < 0:
+        
+        return
+    #Loved the last two
+    elif m_poemappeal[0] > 0 and m_poemappeal[1] > 0:
+        m 5a "I'm beginning to think you're writing these for me, [player]~"
+        mc "What? N-no, nothing like that!"
+        m "Ahaha! I'm just kidding."
+        return
+    #Liked one of the previous poems, plus this one
+    elif m_poemappeal[0] > 0 or m_poemappeal[1] > 0:
+        
+        return
+    #This is the first poem she really liked
+    else:
+
+        return
 
 label m_natsuki_3:
     m 2j "Sticking with the Natsuki style once more, I see~"
