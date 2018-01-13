@@ -1,7 +1,3 @@
-#This is a copy of splash.rpy from DDLC.
-#Use this as a reference for DDLC's normal game flow.
-#The version of splash.rpy in the /game folder is better as a base for modding.
-
 init python:
     menu_trans_time = 1
     splash_message_default = "This mod is fan content and is in no way affiliated with Team Salvato."
