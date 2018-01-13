@@ -1338,6 +1338,12 @@ default chapter = 0
 default currentpos = 0
 default faint_effect = None
 
+## Custom var to keep track of good and bad ending requirements
+default mTotal = 0
+default nTotal = 0
+default sTotal = 0
+default yTotal = 0
+
 default s_name = "Sayori"
 default m_name = "Monika"
 default n_name = "Natsuki"
