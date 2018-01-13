@@ -1,6 +1,3 @@
-#This is a copy of script-poemgame.rpy from DDLC.
-#Use this as a starting point if you would like to override with your own.
-
 #Explanation for poemgame
 #This is the code for the poem minigame. It has a lot of built-in reliance
 #on playthrough variables, so ensure that those are set correctly or this file
