@@ -40,15 +40,18 @@ label monika_exclusive_1:
     m 2b "If anything, I should be the one apologising, I didn't realise you had nothing to read."
     "Well, I do have Yuri's book, but I'm not really feeling like reading right now..."
     m "Sorry Sayori, I'll sort this out with you another time if that's okay~"
+    show monika 2a at t22 zorder 2
     show sayori 1a at f21 zorder 3
     s "Yeah, no problem!"
+    show sayori at thide zorder 2
     hide sayori
-    with wipeleft
     "Sayori leaves Monika to go and talk to Natsuki, who is still in the closet."
     show monika 2a at f11 zorder 3
-    m "So, [player], since it's your first day at the club, I think it would be good if I helped you settle in!"
+    m 2b "So, [player], since it's your first day at the club, I think it would be good if I helped you settle in!"
+    show monika 2a
     mc "Ah, you don't have to~"
     m 2b "It's my duty as Club President!" 
+    show monika 2a
     "I feel bad for stopping her conversation with Sayori, but Monika seems commited now."
     mc "Well, if you insist..."
     m 3k "Of course! It's my job to please all my club members~"
@@ -56,6 +59,7 @@ label monika_exclusive_1:
     m 1b "Anyway, let me think of something we could do..."
     m 4k "Oh, I know!" 
     m 4b "Since you're new to the club, why don't you tell me a little more about yourself?"
+    show monika 2a
     "That's...oddly personal."
     "I'm not bothered by the question, but I would have assumed that her suggestion would be a little more literature based."
     mc "Ah, well...there's not much to know, really."
@@ -131,14 +135,13 @@ label monika_exclusive_1:
         mc "I guess..."
         m 2e "I know you're pretty into manga, but it sounds like you might enjoy something like..."
         m 4j "Oh, I know!"
+        show monika at thide zorder 2
         hide monika
-        with wipeleft
         "Monika walks over to the desk."
         m "Something like this!"
         "She walks back over to me, holding a book of some sort."
-        show monika at t21 zorder 3
-        mc "What is it?"
-        m 2a "It's one of my favorite books. It's called 'Summer Tales'"
+        show monika at f11 zorder 3
+        m 2a "This is one of my favorite books. It's called 'Summer Tales'"
         m 2b "To put it simply, it's a collection of short stories that all take place in the summer time."
         m 2d "There's quite a variety in the stories. Some are happy, some are sad and some are bittersweet."
         m 2k "It's quite the read!"
@@ -147,6 +150,30 @@ label monika_exclusive_1:
         mc "Thank you, Monika! I'll definitely read this."
         show monika 5a
         m "You're welcome, [player]"
+
+    s "Monikaaaa!"
+    m "Hm?"
+    "Sayori rushes over from the closet to where Monika and I are talking."
+    show monika 1a at t21 zorder 2
+    show sayori at f22 zorder 3
+    s 2c "Sorry to interrupt you two, but..." 
+    s 5d "Weren't we gonna share poems today?"
+    show sayori at t22 zorder 2
+    show monika at f21 zorder 3
+    m 2l "Ah, right."
+    m 2b "I almost forgot!"
+    show monika at t21 zorder 2
+    show sayori at f22
+    s 2c "You mean... you did forget!"
+    show sayori at t22
+    show monika at f21
+    m 1l "...No need to rub it in, Sayori!"
+    m 3b "In any case, let's share poems!"
+    show monika 2a at t21 zorder 2
+    show sayori at f22
+    s 2a "I'll go get the others!"
+    show sayori at thide zorder 2
+    hide sayori
     return
 
 label detectiveChoice:
