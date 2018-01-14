@@ -9,14 +9,14 @@ label monika_exclusive_1:
     show monika 2b at f22 zorder 3
     show sayori 1a at t21 zorder 2
     m "In any case, we really need these new members, Sayori. I'm just not sure that the others are as keen as me, you know?"
-    show monika 2a at f22 zorder 2
-    show sayori 1j at t21 zorder 3
+    show monika 2a at t22 zorder 2
+    show sayori 1j at f21 zorder 3
     s "Yeah..."
     show sayori 1i at t21 zorder 2
     show monika 2e at f22 zorder 3
     m 2f "[player] is the first new member we've had in months. I get that we're already an official club~"
-    show monika 2e at f22 zorder 2
-    show sayori 2c at t21 zorder 3    
+    show monika 2e at t22 zorder 2
+    show sayori 2c at f21 zorder 3    
     s "...But it makes you upset that you can't get others interested in literature?"
     show sayori 2b at t21 zorder 2
     show monika 2j at f22 zorder 3
@@ -28,19 +28,19 @@ label monika_exclusive_1:
     show sayori 1b at t21 zorder 2
     show monika 2e at f22 zorder 3
     m 1m "...Though it's not really like I can blame anyone~"
-    show monika 1e at f22 zorder 2
+    show monika 1e at t22 zorder 2
     "Monika's eyes meet mine and we gaze at eachother for a moment."
     show monika 3l at f22 zorder 3
     m 3l "...You okay, [player]?"
     "I snap out of the half-awake state I was in and my face reddens slightly."
-    show monika 2l at f22 zorder 2
+    show monika 2l at t22 zorder 2
     mc "I-I'm sorry... I was lost in thought..."
     show monika 2j at f22 zorder 3
     m "Aha, don't worry!" 
     m 2b "If anything, I should be the one apologising, I didn't realise you had nothing to read."
     "Well, I do have Yuri's book, but I'm not really feeling like reading right now..."
     m "Sorry Sayori, I'll sort this out with you another time if that's okay~"
-    show sayori 1a at t21 zorder 3
+    show sayori 1a at f21 zorder 3
     s "Yeah, no problem!"
     hide sayori
     with wipeleft
@@ -52,7 +52,6 @@ label monika_exclusive_1:
     "I feel bad for stopping her conversation with Sayori, but Monika seems commited now."
     mc "Well, if you insist..."
     m 3k "Of course! It's my job to please all my club members~"
-    show monika 5a at f11 
     "Monika briefly smiles at me."
     m 1b "Anyway, let me think of something we could do..."
     m 4k "Oh, I know!" 
@@ -64,11 +63,11 @@ label monika_exclusive_1:
     mc "Heh, I'd like to think so. But really, all I do is read manga, watch anime and play video games."
     m 2l "...Okay, maybe it is true, aha!"
     mc "Hey!~"
-    show monika 3a
+    show monika 3a 
     "I'm a little embarrased, but it's the truth."
     m 3b "Just a joke, [player]! Remember, everyone is more deep and complex than they are willing to let on."
     mc "Ah..."
-    show monika 3a 
+    show monika 3a
     "Monika's sudden shift in tone catches me by surprise."
     "Though, I guess me thinking that only proves what she said to be true..."
     mc "...Well, anyway, what about you Monika?"
@@ -79,7 +78,7 @@ label monika_exclusive_1:
     m 2b "And I really enjoy this club. Watching everyone get along so well is really satisfying, you know?"
     mc "Yeah..."
     m 2k "Including you, [player]!"
-    show monika 5a 
+    show monika 5a
     m "I'm going to make sure you have a great time here, okay?"
     "I nod in agreement."
     m 2b "By the way, do you have a preferred writing style?"
@@ -131,7 +130,7 @@ label monika_exclusive_1:
         m 2a "A book that's not too deep and not too simple. Something in between, you know?"
         mc "I guess..."
         m 2e "I know you're pretty into manga, but it sounds like you might enjoy something like..."
-        m 4j"Oh, I know!"
+        m 4j "Oh, I know!"
         hide monika
         with wipeleft
         "Monika walks over to the desk."
