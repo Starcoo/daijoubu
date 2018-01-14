@@ -31,7 +31,8 @@
  - On the weekend, you can still only help either Yuri or Natsuki, since Sayori and Monika don't need help for their task.
    - If you choose Yuri, you find out about her cutting. You won't be able to help yet unless you took Yuri's route (at least one day).
    - If you choose Natsuki, you find out about her dad and health issues. You won't be able to help yet unless you took Natsuki's route (at least one day).
-   - If you chose Monika and Sayori (any order) in the first two days, you can help both Natsuki and Yuri on different days. You still won't be able to help with their issues yet.
+   
+ - Whoever is focused on the most has their issues revealed first, followed by the next most focused, etc. in act 2.
 
 ## **Additional scripts (new chapters)**
  - *Put changes here. Include ```ch(x).rpa``` file name if possible*
