@@ -3,7 +3,7 @@ label monika_exclusive_1:
     with wipeleft_scene
     "Considering how I'm not too settled into the club at the moment, I don't particularly feel like bothering either Yuri or Natsuki."
     "At the same time, however, I don't want to bother Monika and Sayori's conversation..."
-    play music t6 fadeout 1.0
+    play music t3 fadeout 1.0
     "I look over at the two of them."
     "They're just next to me and appear to be deep in discussion..."
     show monika 2b at f22 zorder 3
@@ -148,15 +148,16 @@ label monika_exclusive_1:
         m 3l "This is my own copy, so don't crease it~"
         "I take the book enthusiastically."
         mc "Thank you, Monika! I'll definitely read this."
-        show monika 5a
-        m "You're welcome, [player]"
+        m 5a "You're welcome, [player]!"
+        m 4k "So, I was thinking~"
 
     s "Monikaaaa!"
-    m "Hm?"
+    m 1d "Hm?"
     "Sayori rushes over from the closet to where Monika and I are talking."
-    show monika 1a at t21 zorder 2
+    show monika 1d at t21 zorder 2
     show sayori at f22 zorder 3
     s 2c "Sorry to interrupt you two, but..." 
+    show monika 1a at t21 zorder 2
     s 5d "Weren't we gonna share poems today?"
     show sayori at t22 zorder 2
     show monika at f21 zorder 3
@@ -164,16 +165,19 @@ label monika_exclusive_1:
     m 2b "I almost forgot!"
     show monika at t21 zorder 2
     show sayori at f22
-    s 2c "You mean... you did forget!"
+    s 2c "You mean..."
+    s 2m "You did forget!"
     show sayori at t22
     show monika at f21
     m 1l "...No need to rub it in, Sayori!"
+    show sayori 1a
     m 3b "In any case, let's share poems!"
     show monika 2a at t21 zorder 2
     show sayori at f22
     s 2a "I'll go get the others!"
     show sayori at thide zorder 2
     hide sayori
+    "Crap... I forgot about this!"
     return
 
 label detectiveChoice:
