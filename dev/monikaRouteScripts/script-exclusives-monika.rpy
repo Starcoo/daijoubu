@@ -16,11 +16,11 @@ label monika_exclusive_1:
     show monika 2e at f22 zorder 3
     m 2f "[player] is the first new member we've had in months. I get that we're already an official club~"
     show monika 2e at t22 zorder 2
-    show sayori 2c at f21 zorder 3    
+    show sayori 2c at f21 zorder 3
     s "...But it makes you upset that you can't get others interested in literature?"
     show sayori 2b at t21 zorder 2
     show monika 2j at f22 zorder 3
-    m "Yes! Exactly!" 
+    m "Yes! Exactly!"
     m 2l "It's {i}so{/i} frustrating!"
     show monika 2j zorder 3
     "As I listen in on their talk, I can't help but notice how passionate Monika is about the club."
@@ -36,7 +36,7 @@ label monika_exclusive_1:
     show monika 2l at t22 zorder 2
     mc "I-I'm sorry... I was lost in thought..."
     show monika 2j at f22 zorder 3
-    m "Aha, don't worry!" 
+    m "Aha, don't worry!"
     m 2b "If anything, I should be the one apologising, I didn't realise you had nothing to read."
     "Well, I do have Yuri's book, but I'm not really feeling like reading right now..."
     m "Sorry Sayori, I'll sort this out with you another time if that's okay~"
@@ -50,14 +50,14 @@ label monika_exclusive_1:
     m 2b "So, [player], since it's your first day at the club, I think it would be good if I helped you settle in!"
     show monika 2a
     mc "Ah, you don't have to~"
-    m 2b "It's my duty as Club President!" 
+    m 2b "It's my duty as Club President!"
     show monika 2a
     "I feel bad for stopping her conversation with Sayori, but Monika seems commited now."
     mc "Well, if you insist..."
     m 3k "Of course! It's my job to please all my club members~"
     "Monika briefly smiles at me."
     m 1b "Anyway, let me think of something we could do..."
-    m 4k "Oh, I know!" 
+    m 4k "Oh, I know!"
     m 4b "Since you're new to the club, why don't you tell me a little more about yourself?"
     show monika 2a
     "That's...oddly personal."
@@ -67,7 +67,7 @@ label monika_exclusive_1:
     mc "Heh, I'd like to think so. But really, all I do is read manga, watch anime and play video games."
     m 2l "...Okay, maybe it is true, aha!"
     mc "Hey!~"
-    show monika 3a 
+    show monika 3a
     "I'm a little embarrased, but it's the truth."
     m 3b "Just a joke, [player]! Remember, everyone is more deep and complex than they are willing to let on."
     mc "Ah..."
@@ -105,7 +105,7 @@ label monika_exclusive_1:
             call actionChoice
         "Neither!":
             call neitherChoice
-    
+
     if choice == 1:
         m 2m "You know, Yuri's kind of into that stuff..."
         mc "Eh?"
@@ -156,7 +156,7 @@ label monika_exclusive_1:
     "Sayori rushes over from the closet to where Monika and I are talking."
     show monika 1d at t21 zorder 2
     show sayori at f22 zorder 3
-    s 2c "Sorry to interrupt you two, but..." 
+    s 2c "Sorry to interrupt you two, but..."
     show monika 1a at t21 zorder 2
     s 5d "Weren't we gonna share poems today?"
     show sayori at t22 zorder 2
@@ -236,3 +236,10 @@ label neitherChoice:
     m 4k"You've certainly proved that to be true, aha!"
     return
 
+label monika_exclusive_2
+    scene bg club_day
+    with wipeleft_scene
+    "Man, this club is more entertaining than I would have thought."
+    ""
+
+    play music t3 fadeout 1.0
